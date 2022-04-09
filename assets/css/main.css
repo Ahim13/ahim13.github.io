@@ -3279,7 +3279,6 @@ input, select, textarea {
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
-		background-color: #dfdfdf;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
@@ -3351,7 +3350,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a:hover {
-						background-color: rgba(222, 222, 222, 0.25);
+						/*background-color: rgba(222, 222, 222, 0.25);*/
 					}
 
 					#nav ul li a.active {
