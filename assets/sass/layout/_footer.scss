@@ -23,6 +23,7 @@
 			margin: (_size(element-margin) * 1.25) 0 _size(element-margin) 0;
 			font-size: 0.8em;
 			text-align: center;
+			color: _palette(accent6);
 		}
 
 		@include breakpoint('<=large') {

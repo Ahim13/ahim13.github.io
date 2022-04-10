@@ -22,7 +22,19 @@
 			border: 0;
 			border-radius: 0;
 			padding: 0;
-		}
+            color: #2d76b0;
+
+          .bottom-right{
+              position: absolute;
+              bottom: -0.5em;
+              right: -0.5em;
+              width: 10em;
+              background-color: #343f3e;
+              padding: 1vh;
+              color: white;
+              font-size: clamp(0.75em, 1.5em, 2vw);
+          }
+        }
 	}
 
 	@mixin color-box($p: null) {
