@@ -85,16 +85,16 @@
 			}
 
 			&.primary {
-				background-color: _palette(accent);
+				background-color: _palette(accent6);
 				color: _palette(invert, bg) !important;
 				box-shadow: none;
 
 				&:hover {
-					background-color: lighten(_palette(accent), 3);
+					background-color: lighten(_palette(accent4), 3);
 				}
 
 				&:active {
-					background-color: darken(_palette(accent), 3);
+					background-color: darken(_palette(accent5), 3);
 				}
 
 				&.icon {
