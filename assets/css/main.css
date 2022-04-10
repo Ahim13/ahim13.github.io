@@ -2623,6 +2623,50 @@ table.alt tbody tr td {
   width: 100%;
 }
 
+.skills:not(:last-child) {
+  margin-bottom: 30px;
+}
+.skills .details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.skills .details span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 3em;
+  line-height: 3em;
+}
+.skills .bar {
+  position: relative;
+  border: 2px solid #343f3e;
+  border-radius: 8px;
+}
+.skills .bar div {
+  position: relative;
+  width: 0;
+  height: 1em;
+  border-radius: 3px;
+  background-color: #8f91a2;
+}
+.skills .icon {
+  display: inline-block;
+  color: #000000;
+}
+.skills .icon:before {
+  font-size: 2.75rem;
+  line-height: 1.3;
+}
+.skills .anim-bar {
+  animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill {
+  100% {
+    width: var(--percent);
+  }
+}
 /* Header */
 #header {
   padding: 5em 5em 1em 5em;
