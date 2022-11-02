@@ -32,7 +32,7 @@
         
         <section id="welcome" class="welcome grey">
             <div class="welcome-left">
-                <p class="welcometitle">Hi! My name is <strong>Benjamin</strong> Blázsovics</p>
+                <p class="welcometitle ">Hi! My name is <strong>Benjamin</strong> Blázsovics</p>
                 <p class="subtitle">Full time Unity developer - AR/XR specialist</p>
 
                 <div class="sociallinks">
@@ -163,15 +163,14 @@
 </div>
 
 <script>
-    function ScrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
     window.onscroll = function () {
         scrollFunction()
     };
+    
+    window.onresize = function () {
+        checknavbar()
+    };
+    
     function scrollFunction() {
         if (window.innerWidth < 1100) {
             return;
@@ -179,11 +178,19 @@
         if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
             document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
             document.getElementById("navbar").style.paddingTop = "0.5em";
-            // document.getElementById("logo").style.height = "40px";
         } else {
             document.getElementById("navbar").style.backgroundColor = "transparent";
             document.getElementById("navbar").style.paddingTop = "2rem";
-            // document.getElementById("logo").style.height = "9rem";
+        }
+    }
+
+    function checknavbar() {
+        if (window.innerWidth < 1100) {
+            document.getElementById("navbar").style.backgroundColor = "";
+            document.getElementById("navbar").style.paddingTop = "";
+        }else if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            document.getElementById("navbar").style.paddingTop = "2rem";
         }
     }
 </script>
