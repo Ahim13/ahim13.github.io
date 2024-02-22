@@ -293,6 +293,10 @@ h5::after {
     text-align: center;
 }
 
+.title h3 {
+    text-align: center;
+}
+
 .aboutme {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -400,16 +404,25 @@ h5::after {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    /*flex-direction: column;*/
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.col-left, .col-right {
+    display: flex;
+    flex: 1;
+    gap: 2em;
     flex-direction: column;
-    gap: 5em;
 }
 
 .project {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    min-width: 1084px;
+    /*min-width: 1084px;*/
     min-height: 739px;
+    max-width: 990px;
     border: 1px solid #656567;
     border-radius: 80px;
     vertical-align: center;
@@ -429,11 +442,7 @@ h5::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 6em;
-    padding-top: 6em;
-    padding-right: 6em;
-    padding-bottom: 6em;
-    padding-left: 6em;
+    padding: 3em;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -635,6 +644,10 @@ h5::after {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .projects-content {
+        padding: 2.5em;
     }
 
     .project-image {
