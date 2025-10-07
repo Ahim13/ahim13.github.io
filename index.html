@@ -37,8 +37,8 @@
           </nav>
           <!-- Language Switcher -->
           <div class="flex items-center gap-2">
-            <button id="btnLangEN" class="h-9 px-3 rounded-md bg-[#283339] text-sm font-semibold" aria-pressed="true">EN</button>
-            <button id="btnLangHU" class="h-9 px-3 rounded-md bg-[#1c2327] text-sm font-semibold">HU</button>
+            <button id="btnLangEN" class="h-9 px-3 rounded-md bg-[#283339] text-sm font-semibold button" aria-pressed="true">EN</button>
+            <button id="btnLangHU" class="h-9 px-3 rounded-md bg-[#1c2327] text-sm font-semibold button">HU</button>
           </div>
         </div>
       </header>
@@ -62,7 +62,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-3 flex-wrap justify-center">
+                <div class="flex gap-3 flex-wrap justify-center button">
                   <a class="flex items-center gap-2 h-10 px-4 rounded-lg bg-[#283339] text-white text-sm font-bold"
                      href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank" rel="noopener">
                     <img src="images/icons/linkedin.svg" class="size-5" alt="LinkedIn" />
@@ -93,7 +93,7 @@
                           <h3 class="text-white text-[22px] font-bold tracking-[-0.015em] mb-3" data-i18n="skills.title">Skills</h3>
                           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-base">
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/unity.svg" class="size-6 invert brightness-0 opacity-90" alt="Unity"/><span class="text-base">Unity</span></div>
-                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/adobe-photoshop.svg" class="size-6 invert brightness-0 opacity-90" alt="Photoshop"/><span class="text-base">Photoshop</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/adobe-photoshop.svg" class="size-6 invert brightness-0 opacity-90" alt="Photoshop"/><span class="text-base">Photoshop / Affinity Photo</span></div>
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/windows.svg" class="size-6 invert brightness-0 opacity-90" alt=".Net"/><span class="text-base">.Net (C# / .Net Core)</span></div>
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/azure.svg" class="size-6 invert brightness-0 opacity-90" alt="DevOps"/><span class="text-base">DevOps (Azure)</span></div>
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/github.svg" class="size-6 invert brightness-0 opacity-90" alt="Git"/><span class="text-base">Git</span></div>
@@ -101,6 +101,11 @@
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/vr.svg" class="size-6 invert brightness-0 opacity-90" alt="VR"/><span class="text-base">VR</span></div>
                               <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/augmented-reality.svg" class="size-6 invert brightness-0 opacity-90" alt="AR/MR"/><span class="text-base">AR/MR</span></div>
                           </div>
+                      </div>
+
+                      <div>
+                          <h3 class="text-white text-[22px] font-bold tracking-[-0.015em] mb-3">Technical Skills</h3>
+                          <div id="skills-container"></div>
                       </div>
                   </div>
               </section>
@@ -111,7 +116,7 @@
               <p class="text-[#9db0b9] text-sm px-4" data-i18n="projects.subtitle">Here are some of the projects I have worked throughout the years.</p>
               <div class="flex flex-wrap gap-2 px-4 pt-3" id="projectFilters">
                 <button class="px-3 py-1 rounded-full bg-[#283339] text-white text-xs font-semibold" data-filter="all"><span data-i18n="filter.all">All</span></button>
-                <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="ar"><span data-i18n="filter.ar">AR</span></button>
+                <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="ar"><span data-i18n="filter.ar">AR / MR</span></button>
                 <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="vr"><span data-i18n="filter.vr">VR</span></button>
                 <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="games"><span data-i18n="filter.games">Games</span></button>
               </div>
@@ -121,7 +126,7 @@
                       <img src="images/anatomy.png" alt="Anatomy Trainer" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
                               <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">VR</span>
                               <h3 class="font-bold" data-i18n="proj.at.title">Anatomy Trainer</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.at.desc">The XRC Anatomy Trainer is an immersive Virtual Reality (VR) application that is transforming the way human anatomy is taught and learned.</p>
@@ -146,7 +151,7 @@
                       <img src="images/bugerwald.png" alt="Virtual Tour Guide" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
                               <h3 class="font-bold" data-i18n="proj.vtg.title">Virtual Tour Guide</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.vtg.desc">Wander through the forest with your very own virtual tour guide, while learning the history of Bürgerwald.</p>
                           </div>
@@ -158,7 +163,7 @@
                       <img src="images/zmed.png" alt="3D Medical solution" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
                               <h3 class="font-bold" data-i18n="proj.med.title">3D Medical solution</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.med.desc">An Innovative medical solution which is an augmented reality based visualization technology of 3D medical scans and reality that also strengthens the doctor-patient relationship and improves the medical education.</p>
                           </div>
@@ -170,7 +175,7 @@
                       <img src="images/lumi2.png" alt="Lumi" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
                               <h3 class="font-bold">Lumi</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.lumi.desc">The Lumi software is intended for the conversion of 2D patient imaging into 3D, and for the visualization of 2D and 3D patient imaging, including Augmented Reality, to provide insights in anatomy and pathology in preparation of surgical treatment.</p>
                           </div>
@@ -182,7 +187,7 @@
                       <img src="images/hrmrwide.png" alt="Virtual Mirror" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
                               <h3 class="font-bold" data-i18n="proj.mirror.title">Virtual Mirror</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.mirror.desc">Augmented Reality mirror lets users meet and interact with their favourite characters.</p>
                           </div>
@@ -195,7 +200,8 @@
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
                               <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">Games</span>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">Mobile</span>
                               <h3 class="font-bold">The Doseum Citylab</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.dose.desc">Build a virtual city in AR using a variety of collectible tiles. A game for kids and adult alike</p>
                           </div>
@@ -207,11 +213,24 @@
                       <img src="images/mdc.png" alt="Mecsek Discovery Center" class="w-full aspect-video object-cover" />
                       <div class="px-4 pb-4 flex flex-col justify-between flex-1">
                           <div>
-                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR / MR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">Mobile</span>
                               <h3 class="font-bold" data-i18n="proj.mdc.title">Mecsek Discovery Center</h3>
                               <p class="text-[#9db0b9] text-sm" data-i18n="proj.mdc.desc">Companion application for the Mecsek Discovery Center Exhibition and it's nature trail</p>
                           </div>
-                          <a href="https://play.google.com/store/apps/details?id=hu.innoteq.mecsekerdo" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visitPlay">Visit playstore</a>
+                          <a href="https://play.google.com/store/apps/details?id=hu.innoteq.mecsekdiscovery" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visitPlay">Visit playstore</a>
+                      </div>
+                  </article>
+                  <!-- Project 6 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar">
+                      <img src="images/dunadrava.png" alt="Ős-Dráva navigátor" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">Mobile</span>
+                              <h3 class="font-bold" data-i18n="proj.dd.title">Ős-Dráva navigátor</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.dd.desc">Companion application</p>
+                          </div>
+                          <a href="https://play.google.com/store/apps/details?id=com.bencore.osdrava" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visitPlay">Visit playstore</a>
                       </div>
                   </article>
               </div>
@@ -220,12 +239,12 @@
             <!-- Contact -->
             <section id="contact" class="pt-4 pb-10">
               <div class="px-4">
-                <h2 class="text-white text-[22px] font-bold tracking-[-0.015em] pb-3 text-center" data-i18n="contact.title">Contact</h2>
+                <h2 class="text-white text-[48px] font-bold tracking-[-0.015em] pb-3 text-center" data-i18n="contact.title">Contact</h2>
                 <p class="text-[#9db0b9] text-sm max-w-2xl mx-auto text-center" data-i18n="contact.text">
                   If you are in need of a Unity developer or have a question, send a mail and I’ll get back to you as soon as I can.
                 </p>
-                <div class="mt-4 flex justify-center contact-content">
-                  <a class="inline-flex items-center h-10 px-4 rounded-lg bg-[#283339] text-white text-sm font-bold"
+                <div class="mt-4 flex justify-center button">
+                  <a class="inline-flex items-center h-12 px-6 rounded-lg bg-[#283339] text-white text-lg font-bold"
                      href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#101;&#110;&#106;&#97;&#109;&#105;&#110;&#46;&#98;&#108;&#97;&#122;&#115;&#111;&#118;&#105;&#99;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" data-i18n="contact.cta">Get in touch</a>
                 </div>
               </div>
@@ -237,7 +256,7 @@
       <!-- Footer -->
       <footer class="px-6 md:px-10 py-6 border-t border-[#283339] flex items-center justify-between">
         <p class="text-[#9db0b9] text-sm">&copy; <span>Benjamin Blázsovics</span>.</p>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 button">
           <a href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank" rel="noopener"><img src="images/icons/linkedin.svg" class="size-5" alt="LinkedIn"/></a>
           <a href="https://github.com/Ahim13" target="_blank" rel="noopener"><img src="images/icons/github_white.svg" class="size-5" alt="GitHub"/></a>
           <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#101;&#110;&#106;&#97;&#109;&#105;&#110;&#46;&#98;&#108;&#97;&#122;&#115;&#111;&#118;&#105;&#99;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="email"><img src="images/icons/email.svg" class="size-5" alt="Email"/></a>
