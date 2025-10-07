@@ -1,0 +1,25 @@
+
+body {
+  font-family: 'Space Grotesk','Noto Sans',sans-serif;
+}
+
+.avatar-hero {
+  background-image: url('../../images/self.png');
+}
+
+html {
+    scroll-padding-top: 60px;
+    scroll-behavior: smooth;
+}
+
+.contact-content a {
+    transition: transform 0.2s ease;
+}
+
+.contact-content a:hover {
+    transform: scale(1.2);
+}
+
+.contact-content a:active {
+    transform: scale(1.1);
+}

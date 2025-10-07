@@ -1,226 +1,250 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Benjamin Blázsovics — Unity/XR Developer</title>
 
-<head>
-    <title>Benjamin</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Mahee">-->
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <!--	<noscript>-->
-    <!--		<link rel="stylesheet" href="assets/css/noscript.css" />-->
-    <!--	</noscript>-->
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
+    />
+      
 
-<body class="is-preload">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <div
+      class="relative flex min-h-screen w-full flex-col bg-[#111618] text-white group/design-root overflow-x-hidden"
+    >
+      <!-- Header / Nav -->
+      <header class="flex items-center justify-between border-b border-b-[#283339] px-6 md:px-10 py-3 fixed top-0 left-0 right-0 bg-[#111618] z-[200] shadow-sm">
+        <div class="flex items-center">
+          <h1 class="text-white text-base md:text-lg font-bold leading-tight tracking-[-0.015em]">
+            <span data-i18n="brand.role">Unity/XR Developer</span>
+          </h1>
+        </div>
+        <div class="flex items-center gap-4 md:gap-8">
+          <nav class="flex flex-wrap items-center gap-6 md:gap-9 text-sm font-medium">
+            <a class="hover:text-[#9db0b9]" href="#welcome" data-i18n="nav.home">Home</a>
+            <a class="hover:text-[#9db0b9]" href="#about" data-i18n="nav.about">About</a>
+            <a class="hover:text-[#9db0b9]" href="#projects" data-i18n="nav.projects">Projects</a>
+            <a class="hover:text-[#9db0b9]" href="#contact" data-i18n="nav.contact">Contact</a>
+          </nav>
+          <!-- Language Switcher -->
+          <div class="flex items-center gap-2">
+            <button id="btnLangEN" class="h-9 px-3 rounded-md bg-[#283339] text-sm font-semibold" aria-pressed="true">EN</button>
+            <button id="btnLangHU" class="h-9 px-3 rounded-md bg-[#1c2327] text-sm font-semibold">HU</button>
+          </div>
+        </div>
+      </header>
 
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <nav id="navbar" class="navbar">
-        <ul>
-            <div><a href="#welcome" class="active">Home</a></div>
-            <div><a href="#about">About</a></div>
-            <div><a href="#projects">Projects</a></div>
-            <div><a href="#contact">Contact</a></div>
-        </ul>
-    </nav>
-
-    <!-- Main -->
-    <div id="main" class="main">
-
-        <section id="welcome" class="welcome grey">
-            <div class="welcome-left">
-                <p class="welcometitle ">Hi! My name is <strong>Benjamin</strong> Blázsovics</p>
-                <p class="subtitle">Full time Unity developer - XR specialist (AR/MR/VR)</p>
-
-                <div class="sociallinks">
-                    <a class="button" href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank"><img
-                            src="images/icons/linkedin.svg" class="icon"/>LinkedIn</a>
-                    <a class="button" href="https://github.com/Ahim13" target="_blank"><img
-                            src="images/icons/github_white.svg" class="icon"/>Github</a>
+      <!-- Main Content -->
+      <main class="flex-1 pt-14">
+        <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex justify-center py-8 md:py-12">
+          <div class="flex flex-col w-full max-w-[1000px]">
+            <!-- Welcome -->
+            <section id="welcome" class="flex p-4 @container">
+              <div class="flex w-full flex-col gap-5 items-center text-center">
+                <div class="flex gap-5 flex-col items-center">
+                  <div class="avatar-hero bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-40 w-40 md:min-h-48 md:w-48 shadow-[0_0_0_4px_#1c2327]"></div>
+                  <div class="flex flex-col items-center justify-center">
+                    <p class="text-white text-3xl md:text-4xl font-extrabold leading-tight tracking-[-0.015em]">
+                      <span data-i18n="hero.hi">Hi! My name is</span>
+                      <span data-i18n="hero.name" class="text-white"> Benjamin Blázsovics</span>
+                    </p>
+                    <p class="text-[#9db0b9] text-lg md:text-xl">
+                      <span data-i18n="hero.title">Full time Unity developer - XR specialist (AR/MR/VR)</span>
+                    </p>
+                  </div>
                 </div>
-
-            </div>
-            <div class="welcome-right">
-                <img src="images/self.png" alt="" class="self"/>
-            </div>
-        </section>
-
-
-        <section id="about" class="about white">
-            <div class="about-content">
-                <header class="title">
-                    <h2><strong>About me</strong></h2>
-                </header>
-                <div class="aboutme">
-                    <div class="gettoknowme">
-                        <h5>Get to know me</h5>
-                        <p>
-                            Hello! I’m Ben, a software developer based in Hungary. I like developing interactive
-                            applications / games
-                            with eye pleasing user interfaces which are meant to be fun or educational.
-
-                            I was always an avid gamer which meant that after I graduated from the University of Pécs,
-                            I quickly started to pursue game development and found Unity as a tool for that, and since
-                            that I have been using Unity for creating a variety of different apps.
-                        </p>
-                    </div>
-                    <div class="skills">
-                        <h5>Skills</h5>
-                        <div class="skilllist">
-                            <div><img src="images/icons/unity.svg" class="icon"/>Unity</div>
-                            <div><img src="images/icons/adobe-photoshop.svg" class="icon"/>Photoshop</div>
-                            <div><img src="images/icons/windows.svg" class="icon"/>.Net (C# / .Net Core)</div>
-                            <div><img src="images/icons/azure.svg" class="icon"/>DevOps (Azure)</div>
-                            <div><img src="images/icons/github.svg" class="icon"/>Git</div>
-                            <div><img src="images/icons/c.svg" class="icon"/>C++</div>
-                            <div><img src="images/icons/vr.svg" class="icon"/>VR</div>
-                            <div><img src="images/icons/augmented-reality.svg" class="icon"/>AR/MR</div>
-                        </div>
-                    </div>
+                <div class="flex gap-3 flex-wrap justify-center">
+                  <a class="flex items-center gap-2 h-10 px-4 rounded-lg bg-[#283339] text-white text-sm font-bold"
+                     href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank" rel="noopener">
+                    <img src="images/icons/linkedin.svg" class="size-5" alt="LinkedIn" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a class="flex items-center gap-2 h-10 px-4 rounded-lg bg-[#283339] text-white text-sm font-bold"
+                     href="https://github.com/Ahim13" target="_blank" rel="noopener">
+                    <img src="images/icons/github_white.svg" class="size-5" alt="GitHub" />
+                    <span>GitHub</span>
+                  </a>
                 </div>
-            </div>
-        </section>
+              </div>
+            </section>
 
-        <section id="projects" class="projects dark">
-            <header class="title">
-                <h3>Projects</h3>
-                <p>Here are some of my work throughout the years.</p>
-            </header>
-            <div class="projects-content">
-<!--                <div>-->
-<!--                    <h3>Projects</h3>-->
-<!--                    <p>Here are some of my work throughout the years.</p>-->
-<!--                </div>-->
-                    <div class="col-left">
-                        <section class="project">
-                            <div class="project-container">
-                                <img src="images/bugerwald.png" class="project-image">
-                                <span class="project-info">
-                        <h4>Virtual Tour Guide</h4>
-                        <p>Wander through the forest with your very own virtual tour guide, while learning the history of Bürgerwald.</p>
-                        <a href="https://buergerwald.eggenfelden.de/ar/" target="_blank">Visit website</a>
-                    </span>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <div class="project-container"><img src="images/zmed.png" class="project-image">
-                                <span class="project-info">
-                        <h4>3D Medical solution</h4>
-                        <p>An Innovative medical solution which is an augmented reality based visualization technology of 3D
-                            medical scans and reality that also strengthens the doctor-patient relationship and improves the medical education.</p>
-                        <a href="https://zmed.hu/" target="_blank">Visit website</a>
-                    </span>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <div class="project-container"><img src="images/lumi.png" class="project-image">
-                                <span class="project-info">
-                        <h4>Lumi</h4>
-                        <p>The Lumi software is intended for the conversion of 2D patient imaging into 3D, and for the visualization of 2D and 3D patient imaging, 
-                            including Augmented Reality, to provide insights in anatomy and pathology in preparation of surgical treatment.</p>
-                        <a href="https://www.augmedit.com" target="_blank">Visit website</a>
-                    </span>
-                            </div>
-                        </section>
-                    </div>
+            <!-- About + Skills -->
+              <section id="about" class="pt-6">
+                  <div class="grid gap-6 px-4">
+                      <div>
+                          <h3 class="text-white text-[22px] font-bold tracking-[-0.015em] mb-2" data-i18n="about.getToKnow">Get to know me</h3>
+                          <p class="text-[#9db0b9] text-base leading-relaxed" data-i18n="about.p1">
+                              Hello! I'm Ben, a software developer based in Hungary. I like developing interactive applications / games with eye pleasing user interfaces which are meant to be fun or educational.
+                          </p>
+                          <p class="text-[#9db0b9] text-base leading-relaxed mt-3" data-i18n="about.p2">
+                              I was always an avid gamer which meant that after I graduated from the University of Pécs, I quickly started to pursue game development and found Unity as a tool for that, and since that I have been using Unity for creating a variety of different apps.
+                          </p>
+                      </div>
+                      <div>
+                          <h3 class="text-white text-[22px] font-bold tracking-[-0.015em] mb-3" data-i18n="skills.title">Skills</h3>
+                          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-base">
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/unity.svg" class="size-6 invert brightness-0 opacity-90" alt="Unity"/><span class="text-base">Unity</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/adobe-photoshop.svg" class="size-6 invert brightness-0 opacity-90" alt="Photoshop"/><span class="text-base">Photoshop</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/windows.svg" class="size-6 invert brightness-0 opacity-90" alt=".Net"/><span class="text-base">.Net (C# / .Net Core)</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/azure.svg" class="size-6 invert brightness-0 opacity-90" alt="DevOps"/><span class="text-base">DevOps (Azure)</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/github.svg" class="size-6 invert brightness-0 opacity-90" alt="Git"/><span class="text-base">Git</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/c.svg" class="size-6 invert brightness-0 opacity-90" alt="C++"/><span class="text-base">C++</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/vr.svg" class="size-6 invert brightness-0 opacity-90" alt="VR"/><span class="text-base">VR</span></div>
+                              <div class="flex gap-3 items-center rounded-lg border border-[#3b4b54] bg-[#1c2327] p-4"><img src="images/icons/augmented-reality.svg" class="size-6 invert brightness-0 opacity-90" alt="AR/MR"/><span class="text-base">AR/MR</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
 
-                    <div class="col-right">
-                        <section class="project">
-                            <div class="project-container"><img src="images/hrmr.png" class="project-image">
-                                <span class="project-info">
-                        <h4>Virtual Mirror</h4>
-                        <p>Augmented Reality mirror lets users meet and interact with their favourite characters.</p>
-                        <a href="https://www.indestry.com/hero-mirror" target="_blank">Visit website</a>
-                    </span>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <div class="project-container"><img src="images/dose.png" class="project-image">
-                                <span class="project-info">
-                        <h4>The Doseum Citylab</h4>
-                        <p>Build a virtual city in AR using a variety of collectible tiles. A game for kids and adult alike</p>
-                        <a href="https://www.thedoseum.org/Do-it-at-home/posts/the-doseum-citylab-app" target="_blank">Visit website</a>
-                    </span>
-                            </div>
-                        </section>
-                        <section class="project">
-                            <div class="project-container"><img src="images/mdc.png" class="project-image">
-                                <span class="project-info">
-                        <h4>Mecsek Discory Center</h4>
-                        <p>Companion application for the Mecsek Discory Center Exhibition and it's nature trail</p>
-                        <a href="https://play.google.com/store/apps/details?id=hu.innoteq.mecsekerdo" target="_blank">Visit playstore</a>
-                    </span>
-                            </div>
-                        </section>
-                    </div>
+            <!-- Projects -->
+            <section id="projects" class="pt-4">
+              <h2 class="text-white text-[22px] font-bold tracking-[-0.015em] px-4 pb-3" data-i18n="projects.title">Projects</h2>
+              <p class="text-[#9db0b9] text-sm px-4" data-i18n="projects.subtitle">Here are some of the projects I have worked throughout the years.</p>
+              <div class="flex flex-wrap gap-2 px-4 pt-3" id="projectFilters">
+                <button class="px-3 py-1 rounded-full bg-[#283339] text-white text-xs font-semibold" data-filter="all"><span data-i18n="filter.all">All</span></button>
+                <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="ar"><span data-i18n="filter.ar">AR</span></button>
+                <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="vr"><span data-i18n="filter.vr">VR</span></button>
+                <button class="px-3 py-1 rounded-full bg-[#1c2327] border border-[#3b4b54] text-white text-xs font-semibold" data-filter="games"><span data-i18n="filter.games">Games</span></button>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                  <!-- Project 7 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar,vr">
+                      <img src="images/anatomy.png" alt="Anatomy Trainer" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">VR</span>
+                              <h3 class="font-bold" data-i18n="proj.at.title">Anatomy Trainer</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.at.desc">The XRC Anatomy Trainer is an immersive Virtual Reality (VR) application that is transforming the way human anatomy is taught and learned.</p>
+                          </div>
+                          <a href="https://xrconsole.net/en/projects/xrc-anatomy-trainer" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 8 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="vr">
+                      <img src="images/fwsafe.png" alt="FWSafeXR" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">VR</span>
+                              <h3 class="font-bold" data-i18n="proj.fw.title">FWSafeXR</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.fw.desc">The FWSafeXR Project harnesses the power of Extended Reality (XR) to deliver realistic, hands-on training for safety and emergency scenarios in the forestry sector.</p>
+                          </div>
+                          <a href="https://xrconsole.net/en/projects/fwsafexr/" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                <!-- Project 1 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar">
+                      <img src="images/bugerwald.png" alt="Virtual Tour Guide" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold" data-i18n="proj.vtg.title">Virtual Tour Guide</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.vtg.desc">Wander through the forest with your very own virtual tour guide, while learning the history of Bürgerwald.</p>
+                          </div>
+                          <a href="https://buergerwald.eggenfelden.de/ar/" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 2 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar,simulations">
+                      <img src="images/zmed.png" alt="3D Medical solution" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold" data-i18n="proj.med.title">3D Medical solution</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.med.desc">An Innovative medical solution which is an augmented reality based visualization technology of 3D medical scans and reality that also strengthens the doctor-patient relationship and improves the medical education.</p>
+                          </div>
+                          <a href="https://zmed.hu/" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 3 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar,simulations">
+                      <img src="images/lumi2.png" alt="Lumi" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold">Lumi</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.lumi.desc">The Lumi software is intended for the conversion of 2D patient imaging into 3D, and for the visualization of 2D and 3D patient imaging, including Augmented Reality, to provide insights in anatomy and pathology in preparation of surgical treatment.</p>
+                          </div>
+                          <a href="https://www.augmedit.com" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 4 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar">
+                      <img src="images/hrmrwide.png" alt="Virtual Mirror" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold" data-i18n="proj.mirror.title">Virtual Mirror</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.mirror.desc">Augmented Reality mirror lets users meet and interact with their favourite characters.</p>
+                          </div>
+                          <a href="https://www.indestry.com/hero-mirror" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 5 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar,games">
+                      <img src="images/dose.png" alt="The Doseum Citylab" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">Games</span>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold">The Doseum Citylab</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.dose.desc">Build a virtual city in AR using a variety of collectible tiles. A game for kids and adult alike</p>
+                          </div>
+                          <a href="https://www.thedoseum.org/Do-it-at-home/posts/the-doseum-citylab-app" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visit">Visit website</a>
+                      </div>
+                  </article>
+                  <!-- Project 6 -->
+                  <article class="flex flex-col gap-3 rounded-lg bg-[#1c2327] overflow-hidden min-h-[420px]" data-tags="ar">
+                      <img src="images/mdc.png" alt="Mecsek Discovery Center" class="w-full aspect-video object-cover" />
+                      <div class="px-4 pb-4 flex flex-col justify-between flex-1">
+                          <div>
+                              <span class="inline-block text-[10px] font-bold uppercase tracking-wide bg-[#283339] text-white rounded-full px-2 py-1 mb-2">AR</span>
+                              <h3 class="font-bold" data-i18n="proj.mdc.title">Mecsek Discovery Center</h3>
+                              <p class="text-[#9db0b9] text-sm" data-i18n="proj.mdc.desc">Companion application for the Mecsek Discovery Center Exhibition and it's nature trail</p>
+                          </div>
+                          <a href="https://play.google.com/store/apps/details?id=hu.innoteq.mecsekerdo" target="_blank" rel="noopener" class="text-sm font-semibold text-white hover:text-[#9db0b9] mt-2" data-i18n="proj.visitPlay">Visit playstore</a>
+                      </div>
+                  </article>
+              </div>
+            </section>
 
-            </div>
-        </section>
-
-        <section id="contact" class="contact grey">
-            <div class="contact-content">
-                <header class="title">
-                    <h2><strong>Contact</strong></h2>
-                </header>
-                <p>
-                    If you are in need of a <span class="highlight-text">Unity developer</span> or have a question, send
-                    a mail and I’ll get back to you as soon as I can.
+            <!-- Contact -->
+            <section id="contact" class="pt-4 pb-10">
+              <div class="px-4">
+                <h2 class="text-white text-[22px] font-bold tracking-[-0.015em] pb-3 text-center" data-i18n="contact.title">Contact</h2>
+                <p class="text-[#9db0b9] text-sm max-w-2xl mx-auto text-center" data-i18n="contact.text">
+                  If you are in need of a Unity developer or have a question, send a mail and I’ll get back to you as soon as I can.
                 </p>
-                <a class="button" href="mailto: benjamin.blazsovics@gmail.com"><img src="images/icons/email.svg"
-                                                                                    class="icon"/>Get in touch</a>
-            </div>
-        </section>
+                <div class="mt-4 flex justify-center contact-content">
+                  <a class="inline-flex items-center h-10 px-4 rounded-lg bg-[#283339] text-white text-sm font-bold"
+                     href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#101;&#110;&#106;&#97;&#109;&#105;&#110;&#46;&#98;&#108;&#97;&#122;&#115;&#111;&#118;&#105;&#99;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" data-i18n="contact.cta">Get in touch</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
 
-        <footer id="footer" class="footer black">
-            <p class="copyright">&copy; Benjamin Blázsovics.</p>
-            <div>
-                <a href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank"><img
-                        src="images/icons/linkedin.svg" class="icon"/></a>
-                <a href="https://github.com/Ahim13" target="_blank"><img src="images/icons/github_white.svg"
-                                                                         class="icon"/></a>
-                <a href="mailto: benjamin.blazsovics@gmail.com"><img src="images/icons/email.svg" class="icon"/></a>
-            </div>
-        </footer>
+      <!-- Footer -->
+      <footer class="px-6 md:px-10 py-6 border-t border-[#283339] flex items-center justify-between">
+        <p class="text-[#9db0b9] text-sm">&copy; <span>Benjamin Blázsovics</span>.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://linkedin.com/in/benjamin-blázsovics-903901125" target="_blank" rel="noopener"><img src="images/icons/linkedin.svg" class="size-5" alt="LinkedIn"/></a>
+          <a href="https://github.com/Ahim13" target="_blank" rel="noopener"><img src="images/icons/github_white.svg" class="size-5" alt="GitHub"/></a>
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#101;&#110;&#106;&#97;&#109;&#105;&#110;&#46;&#98;&#108;&#97;&#122;&#115;&#111;&#118;&#105;&#99;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="email"><img src="images/icons/email.svg" class="size-5" alt="Email"/></a>
+        </div>
+      </footer>
     </div>
-</div>
 
-<script>
-    window.onscroll = function () {
-        scrollFunction()
-    };
-
-    window.onresize = function () {
-        checknavbar()
-    };
-
-    function scrollFunction() {
-        if (window.innerWidth < 1100) {
-            return;
-        }
-        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-            document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-            document.getElementById("navbar").style.paddingTop = "0.5em";
-        } else {
-            document.getElementById("navbar").style.backgroundColor = "transparent";
-            document.getElementById("navbar").style.paddingTop = "2rem";
-        }
-    }
-
-    function checknavbar() {
-        if (window.innerWidth < 1100) {
-            document.getElementById("navbar").style.backgroundColor = "";
-            document.getElementById("navbar").style.paddingTop = "";
-        } else if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-            document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-            document.getElementById("navbar").style.paddingTop = "2rem";
-        }
-    }
-</script>
-
-
-</body>
-
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
